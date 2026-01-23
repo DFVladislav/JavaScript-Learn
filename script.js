@@ -1,2 +1,5 @@
-a = 5, b = 10, c = 3, d = 'hello', v = '10', sum = a + v
-console.log(typeof(sum))
+let a = +prompt("Введите ваше число в диапозоне от 10 до 100")
+let result = (a >=10) ?
+"a <100" :
+"a > 100"
+console.log(result)
