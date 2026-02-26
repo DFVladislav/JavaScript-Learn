@@ -279,7 +279,7 @@ switch (a) {
 
 функции
 
-1 - метод function decl orattion
+1 - метод function declorattion
 function sum () { //объявление функции с параметрами (или без)
     блок кода функции (callback)
 }
@@ -291,7 +291,7 @@ function sum (a, b) {
 }
 console.log (sum(3, 4))
 
-2. Function Expression. 
+2. Function Expression.
 let sum = function(a, b) {
     return a + b
 }
@@ -302,3 +302,217 @@ let sum = (a, b) => {
 
 }
 console.log(sum(3,4))
+
+
+Параметры функции.
+1. Объявление функции function sum (a,b) или
+let sum = function (a,b)
+let sum = (a, b) =>  a+b
+
+
+let age = +prompt("Введите ваш возраст")
+let welcome = (age > 18) ? function() {
+    alert("Совершеннолетний")
+} !
+function() {
+    alert("Несовершеннолетний")
+}
+
+ОБЪЕКТЫ
+
+let user = {
+    name = "Ivanov",
+    age 30,
+    number: 3252345;
+}
+
+alert(user.name) (либо также .age и тд), получаем значение свойств объекта
+
+
+const user = {
+    name = "Ivanov",
+    age 30,
+    number: 3252345;
+}
+
+let key = prompt("Что вы хотите узнать о пользователе?")
+console.log(user(key))
+
+могут быть также пустые значения
+
+user.name = "Petrov"
+
+alert(user.name) - увидится Petrov, сам объект константа - но внутри него можно все менять
+
+
+Объект по сути это некий ящик, как папка(контейнер), и они подписаны
+
+
+function makeUser (name, age) {
+    return {
+        name: name,
+        age: age
+    }
+}
+
+let user = makeUser("Ivanov", 30)
+console.log(user.name)
+
+
+let user = {
+    name = "Ivanov"
+    age: 30;
+
+}
+user["phone"] = "3213352335"
+delete user["name"] // удаление свойств в объекте
+
+console.log("name" in user)
+console.log(user.phone)
+
+
+МАССИВЫ!!! ВАЖНО!!!!
+
+Это объект для упорядовачивания нескольких значений
+Каждый элемент массива имеет свой индекс (с 0)
+
+let array = [1, "hello", true, 3.14]
+console.log(array)[0] - указываем значение индекса и получаем 1
+
+
+метод push() - добавляет элемент в конец массива
+array.push(5) - удаляет последний элемент массива
+array.shift() - удаляет первый элемент массива
+array.unshift("world" - добавляет первый элемент)
+indexOf() - возвращает индекс найденного элемента
+
+array.pop()
+    console.log(array.indexOf("hello"))
+
+const array = [-3, 0, 2, 10] //filter() - возвращает новый массив содержащий элементы
+// которые выполняютт условие
+// фильтрация массива в положительные числа
+const newArray = array.filter(function (element) {
+    if (element >= 0) {
+
+        return true;
+
+    }
+    else {
+        return false;
+    }
+
+})
+
+console.log(array)
+console.log(newArray)
+
+const array = [-3, 0, 2, 10, "hello", function func(){alert("hello, world")}]
+
+array[5]() - вызов функции из массива
+
+const arrayFirst = [-3, 0, 2, 10, "hello"]
+const arraySecond = [5, 1, "world"]
+const arrayThird = [12, 15, 22]
+// слияние и срез массивов
+// concat()
+//slice()
+const  arrayMerged = arrayFirst.concat(arraySecond).concat(arrayThird)
+console.log(arrayMerged)
+
+
+const arrayFirst = [-3, 0, 2, 10, "hello"]
+const arraySecond = [5, 1, "world"]
+const arrayThird = [12, 15, 22]
+// слияние и срез массивов
+// concat()
+//slice()
+const newArray = arrayFirst.slice(2)
+console.log(newArray)
+
+const arrayFirst = [-3, 0, 2, 10, "hello"]
+const arraySecond = [5, 1, "world"]
+const arrayThird = [12, 15, 22]
+// слияние и срез массивов
+// concat()
+//slice()
+const newArray = arrayFirst.slice(2, 3) // оставляет все со второго индекса до третьего, первый элемент захватывает, второй срезает
+console.log(newArray)
+
+
+// Объекты
+// функция внутри объекта называется методом
+// this - берет значение из переменной объекта
+const user = {
+    name: prompt("Введите свое имя"),
+    age: 20,
+    hello: function(){
+        alert(this.name)
+    }
+}
+
+user.hello()
+
+const user = {
+    name: "Ivanov",
+    age: 20,
+}
+
+const clone = {} // добавляем пустой объект clone
+for(let key in user) { // переебор свойств объекта
+    clone[key] = user[key];
+}
+// clone.name="Petrov"
+clone['name'] = 'Petrov'
+console.log(user.name)
+
+console.log(clone.name)
+
+const clone = {} // добавляем пустой объект clone
+for(let i in user) { // переебор свойств объекта
+    clone[i] = user[i];
+}
+// clone.name="Petrov"
+clone['email'] = '@mail.ru'
+console.log(user.name)
+
+console.log(Object.keys(clone).length) // выведем  количество свойстввв вв объекте
+
+//document.getElementById("id элемента")
+const clicker = () => {
+    const firstDiv = document.getElementById("firstDiv")
+    firstDiv.style.background = 'red';
+    firstDiv.style.fontSize = '30px';
+}
+
+//document.querySelector(".#") - находит первый класс или айди из кода и применяет к нему свойства
+const firstDddiv = document.querySelector("#firstDiv") // если class - используем точку вместо #
+firstDiv.style.background = 'red'
+
+![alt text](image.png)
+
+const divs = document.querySelectorAll("div");  - выбираем все элементы, в виде МАССИВА и помогает нам для каждого дива применить какую то функцию
+divs.forEach(div => console.log(div.textContent));
+console.log(divs.length) - считаем кол-во блоков div
+
+
+## Пример добавления контента с помощью js в другие div
+![alt text](image-1.png)
+
+
+Добавляем после div
+![alt text](image-2.png)
+
+![alt text](image-4.png)
+
+делаем с помощью цикла кучу дивов
+![alt text](image-5.png)
+
+
+Задаеем стили через css внутри js
+![alt text](image-6.png)
+
+А теперь же с помощью функции по клику меняем стили
+![alt text](image-9.png)
+
+tailwind и bootstrap дляяя ознакомления

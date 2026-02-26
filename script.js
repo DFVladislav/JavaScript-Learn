@@ -49,7 +49,19 @@
 // }
 
 
-function sum (a, b) {
-    return a + b
+
+function blocks () {
+    for (let i = 0; i < 3; i++) {
+        const div = document.createElement("div")
+        document.classList.add("inactive")
+    }
 }
-console.log (sum(3, 4))
+blocks()
+
+function clicker() {
+    const divs = document.querySelectorAll("div")
+    divs.forEach(element => {
+        element
+    })
+    divs.classListt.toggle("active")
+}

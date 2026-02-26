@@ -1,0 +1,8 @@
+.active {
+    height:100px;
+    background-color: aqua;
+}
+
+.inactive {
+    background-color: black;
+}
