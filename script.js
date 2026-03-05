@@ -50,18 +50,110 @@
 
 
 
-function blocks () {
-    for (let i = 0; i < 3; i++) {
-        const div = document.createElement("div")
-        document.classList.add("inactive")
-    }
-}
-blocks()
+// let age = +prompt("Введите ваш возраст")
+// function checkAge(age) {
+//     if (age <= 18) {
+//         return "Доступ запрещен"
+//     }
+//     else {
+//         return "Доступ разрешен "
+//     }
+// }
+// let result =  checkAge(age)
+// console.log(result)
 
-function clicker() {
-    const divs = document.querySelectorAll("div")
-    divs.forEach(element => {
-        element
-    })
-    divs.classListt.toggle("active")
-}
+
+// let laptop = {
+//     brand: "Asus",
+//     price: 500,
+//     isWorking: true,
+// }
+// function upPrice(price) {
+//     price.price = laptop.price + 500
+//     return laptop.price
+// }
+// let sum = upPrice(laptop)
+// console.log(sum)
+// console.log(laptop.price)
+
+
+// let user = {
+//     name: "Admin",
+//     score: 10
+// }
+// function doubleScore(obj) {
+//     obj.score = user.score* 2
+// }
+// let result = doubleScore(user)
+// console.log(user)
+
+// let cart = ["Хлеб", "Молоко"];
+
+// function addToCart(item) {
+//     cart.push(item); // Пишем метод прямо внутри тела функции
+//     console.log(item + " добавлен в корзину!");
+// }
+
+// addToCart("Колбаса");
+// console.log(cart); // ["Хлеб", "Молоко", "Колбаса"]
+
+
+// let numbers = [10, 20, 30]
+// let lastNum = numbers.pop()    -pop и прочие функции сохраняют значение массива который можно потом вывести
+// console.log(lastNum)
+// console.log(numbers)
+
+
+// let array = [ 1, 2, 3, 4]
+// function sumArray(numbers) {
+// let sum = 0
+// for (let i = 0; i < numbers.length; i++)
+//     sum += numbers[i]
+// return sum;
+// }
+
+
+// let result  = sumArray(array)
+// console.log(result)
+// console.log(array)
+
+// let number = +prompt("Введите число")
+// function isEven(a) {
+//     if (a % 2 == 0)
+//         return true
+//     else {
+//         return false
+//     }
+// }
+// let result = isEven(number)
+// console.log(result)
+
+// const user = {
+//     name: "Ivan",
+//     age: 25
+// };
+
+// function sayHi(person) {
+
+//     console.log("Привет, меня зовут " + person.name + ", мне " + person.age + " лет");
+// }
+
+// sayHi(user); 
+
+
+const users = [
+  { name: "Аня", age: 17 },
+  { name: "Игорь", age: 25 },
+  { name: "Олег", age: 14 },
+  { name: "Маша", age: 19 }
+];
+
+// users.forEach(function(user) {
+//     if (user.age > 18) {
+//         console.log(user.name);         // - перебор по возрасту
+//     }
+// });
+
+users.forEach(function(user){
+    
+})

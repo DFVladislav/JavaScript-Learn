@@ -495,24 +495,40 @@ const divs = document.querySelectorAll("div");  - выбираем все эле
 divs.forEach(div => console.log(div.textContent));
 console.log(divs.length) - считаем кол-во блоков div
 
+function blocks () {
+    for (let i = 0; i < 3; i++) {
+        const div = document.createElement("div")
+        document.classList.add("inactive")
+    }
+}
+blocks()
+
+function clicker() {
+    const divs = document.querySelectorAll("div")
+    divs.forEach(element => {
+        element
+    })
+    divs.classList.toggle("active")
+}
+
 
 ## Пример добавления контента с помощью js в другие div
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 
 Добавляем после div
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 делаем с помощью цикла кучу дивов
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 
 Задаеем стили через css внутри js
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 А теперь же с помощью функции по клику меняем стили
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 tailwind и bootstrap дляяя ознакомления
