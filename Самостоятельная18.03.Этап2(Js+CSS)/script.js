@@ -34,6 +34,7 @@ function createForm() {
 
 function createMain() {
     const main = document.createElement("main")
+    main.className = "container"
     main.appendChild(createImgBlock("Это кот 1,", "https://optim.tildacdn.com/tild3639-3964-4634-b239-393833386638/-/resize/824x/-/format/webp/54080808080.png.webp"))
     main.appendChild(createImgBlock("Это кот 2,", "https://img.goodfon.ru/wallpaper/big/7/3e/koshki-milye-kotiki.webp" ))
     main.appendChild(createForm());

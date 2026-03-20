@@ -2,6 +2,14 @@ function applyStyles(element, styles) {
     Object.assign(element.style, styles)
 }
 
+applyStyles(document.body, {
+    fontFamily: "Arial, sans-serif",
+    backgroundColor: "#f4f4f4",
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    margin: "0"
+});
 
 function createHeader() {
     const header = document.createElement("header")
@@ -42,7 +50,9 @@ function createImgBlock(text, imgSrc) {
     img.src = imgSrc
     img.alt = "Пример"
     applyStyles(img, {
-        maxWidth: "100%",
+        marginTop: "15px",
+        maxWidth: "400px",
+        width: "100%",
         height: "auto",
         borderRadius: "8px"
     })
